@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 function Parents(props) {
-    return (
-        <div>
-            
-        </div>
-    );
+  return (
+    <div>
+      <h1>Parents page</h1>
+    </div>
+  );
 }
 
 export default Parents;

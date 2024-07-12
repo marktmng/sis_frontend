@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 function Program(props) {
-    return (
-        <div>
-            
-        </div>
-    );
+  return (
+    <div>
+      <h1>Program page</h1>
+    </div>
+  );
 }
 
 export default Program;
