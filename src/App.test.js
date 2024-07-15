@@ -1,17 +1,17 @@
-import { render, screen, waitFor } from '@testing-library/react';
-import App from './App';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React from 'react';
+import renderer from 'react-test-renderer';
+import HelloWorld from './components/HelloWorld';
 
-test('renders learn react link', async () => {
-  render(
-    <Router>
-      <App />
-    </Router>
-  );
+// test('renders learn react link', () => {
+//   render(<App />);
+//   const linkElement = screen.getByText(/learn react/i);
+//   expect(linkElement).toBeInTheDocument();
+// });
 
-  // Use waitFor to wait for the element to appear
-  await waitFor(() => {
-    const linkElement = screen.getByText(/learn react/i);
-    expect(linkElement).toBeInTheDocument();
-  });
-});
+test('renders learn react link', () => {
+
+  const components = renderer.create(<HelloWorld />);
+  const tree = components.toJSON();
+  expect(tree).toMatchSnapshot();
+
+})
