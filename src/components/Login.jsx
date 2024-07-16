@@ -24,7 +24,7 @@ function Login(props) {
     let config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: BaseUrl + 'auth/',
+      url: BaseUrl + "auth/",
       headers: {
         "Content-Type": "application/json",
       },
@@ -36,6 +36,7 @@ function Login(props) {
       .then((response) => {
         console.log(JSON.stringify(response.data));
         setLogin_status("Login Successful");
+        localStorage.setItem("Token", response.data.token); // store the token in local storage
       })
       .catch((error) => {
         console.log(error);
