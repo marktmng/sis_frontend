@@ -1,20 +1,30 @@
-// const express = require("express");
-// const cors = require("cors");
-// const authRouter = require("./auth"); // Adjust the path if necessary
-// const app = express();
+const express = require("express");
+const cors = require("cors");
+const app = express();
 
-// app.use(
-//   cors({
-//     origin: "http://localhost:3000",
-//     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-//     allowedHeaders: ["Content-Type", "Authorization"],
-//     credentials: true,
-//   })
-// );
+const corsOptions = {
+  origin: "https://sis-frontend-ten.vercel.app",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
 
-// app.use(express.json()); // Middleware to parse JSON bodies
-// app.use("/auth", authRouter);
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
 
-// app.listen(3000, () => {
-//   console.log("Server is running on port 3000");
-// });
+app.use((req, res, next) => {
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://sis-frontend-ten.vercel.app"
+  );
+  res.header("Access-Control-Allow-Methods", "GET,HEAD,PUT,PATCH,POST,DELETE");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  next();
+});
+
+app.use(express.json());
+
+// Your routes here
+
+app.listen(3000, () => {
+  console.log("Server is running on port 3000");
+});
