@@ -26,6 +26,7 @@ function Topbar(props) {
               </NavDropdown.Item>
               <NavDropdown.Item href="/tutionfee">Tution Fee</NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link href="/login">Login</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -9,6 +9,7 @@ import Parents from './components/Parents';
 import Program from './components/Program';
 import StudentMark from './components/StudentMark';
 import TutionFee from './components/TutionFee';
+import Login from './components/Login';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Route path="/program" element={<Program/>}/>
       <Route path="/studentmark" element={<StudentMark/>}/>
       <Route path="/tutionfee" element={<TutionFee/>}/>
+      <Route path="/login" element={<Login/>}/>
 
       </Routes>
     </div>
