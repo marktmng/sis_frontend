@@ -2,6 +2,10 @@ import React from 'react';
 
 function Home(props) {
 
+<<<<<<< HEAD
+=======
+    // Define styles
+>>>>>>> fb679f2d104e56a55b6e082ffd3e87380fb17ef6
     const styles = {
         container: {
             maxWidth: '800px',
@@ -12,6 +16,10 @@ function Home(props) {
             fontFamily: 'Arial, sans-serif',
             fontSize: '16px',
             marginTop: '200px',
+<<<<<<< HEAD
+=======
+            backgroundColor: '#f8f8f8',
+>>>>>>> fb679f2d104e56a55b6e082ffd3e87380fb17ef6
         },
         heading: {
             color: '#333',
@@ -34,6 +42,11 @@ function Home(props) {
             marginBottom: '10px',
         }
     };
+<<<<<<< HEAD
+=======
+
+    // Render the component
+>>>>>>> fb679f2d104e56a55b6e082ffd3e87380fb17ef6
     return (
         <div style={styles.container}>
             <h2 style={styles.heading}>Welcome to the Southern Institute of Studies (SIS) Web Application Development Project</h2>

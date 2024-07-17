@@ -1,7 +1,6 @@
 import axios from "axios";
 import React from "react";
 import { BaseUrl } from "../Constants";
-import "../Login.css";
 
 function Login(props) {
   const [username, setUsername] = React.useState("");
@@ -37,12 +36,6 @@ function Login(props) {
       .request(config)
       .then((response) => {
         console.log(JSON.stringify(response.data));
-        setLogin_status("Login Successful"); // show login status
-        localStorage.setItem("Token", response.data.token); // store the token in local storage
-      })
-      .catch((error) => {
-        console.log(error);
-        setLogin_status("Login Failed"); // show login status
         setLogin_status("Login Successful");
       })
       .catch((error) => {
