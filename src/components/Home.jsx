@@ -13,7 +13,7 @@ function Home(props) {
             fontFamily: 'Arial, sans-serif',
             fontSize: '16px',
             marginTop: '200px',
-            backgroundColor: '#f8f8f8',
+            backgroundColor: '#f8f8f8', // this one double which was having coflit to push
         },
         heading: {
             color: '#333',
