@@ -16,7 +16,7 @@ function Topbar(props) {
             <Nav.Link href="/program">Program</Nav.Link>
 
             {/* Dropdown */}
-            <NavDropdown title="Services" id="basic-nav-dropdown">
+            <NavDropdown title="Sections" id="basic-nav-dropdown">
               <NavDropdown.Item href="/lecturer">Lecturer</NavDropdown.Item>
               <NavDropdown.Item href="/students">Students </NavDropdown.Item>
               <NavDropdown.Item href="/parents">Parent</NavDropdown.Item>
@@ -26,7 +26,12 @@ function Topbar(props) {
               </NavDropdown.Item>
               <NavDropdown.Item href="/tutionfee">Tution Fee</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="/login">Login</Nav.Link>
+
+            {/* Dropdown */}
+            <NavDropdown title="Portal" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/login">Login</NavDropdown.Item>
+              <NavDropdown.Item href="/registration">Register</NavDropdown.Item>
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
