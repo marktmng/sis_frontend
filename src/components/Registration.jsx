@@ -88,10 +88,10 @@ function Registration(props) {
   }, []);
 
   return (
-    <div class="registration-form">
+    <div className="registration-form">
       <h2>Register</h2>
-      <div class="form-group">
-        <label for="name">Name:</label>
+      <div className="form-group">
+        <label >Name:</label>
         <input
           type="text"
           id="name"
@@ -99,8 +99,8 @@ function Registration(props) {
           onChange={(e) => setName(e.target.value)}
         />
       </div>
-      <div class="form-group">
-        <label for="program">Program:</label>
+      <div className="form-group">
+        <label>Program:</label>
         <select
           id="program"
           value={selectedProgram}
@@ -114,8 +114,8 @@ function Registration(props) {
           ))}
         </select>
       </div>
-      <div class="form-group">
-        <label for="email">Email:</label>
+      <div className="form-group">
+        <label>Email:</label>
         <input
           type="email"
           id="email"
@@ -123,8 +123,8 @@ function Registration(props) {
           onChange={(e) => setEmail(e.target.value)}
         />
       </div>
-      <div class="form-group">
-        <label for="username">Username:</label>
+      <div className="form-group">
+        <label>Username:</label>
         <input
           type="text"
           id="username"
@@ -132,10 +132,10 @@ function Registration(props) {
           onChange={(e) => setUsername(e.target.value)}
         />
       </div>
-      <button class="register-btn" onClick={registerHandler}>
+      <button className="register-btn" onClick={registerHandler}>
         Register
       </button>
-      <p class="register-status">{register_status}</p>
+      <p className="register-status">{register_status}</p>
     </div>
   );
 }
