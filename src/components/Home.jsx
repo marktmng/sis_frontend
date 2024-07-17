@@ -2,6 +2,7 @@ import React from 'react';
 
 function Home(props) {
 
+    // Define styles
     const styles = {
         container: {
             maxWidth: '800px',
@@ -35,6 +36,8 @@ function Home(props) {
             marginBottom: '10px',
         }
     };
+
+    // Render the component
     return (
         <div style={styles.container}>
             <h2 style={styles.heading}>Welcome to the Southern Institute of Studies (SIS) Web Application Development Project</h2>
