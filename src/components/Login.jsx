@@ -22,7 +22,7 @@ function Login(props) {
     });
 
     let config = {
-      method: "post",
+      method: "post", // Ensure POST method is used
       maxBodyLength: Infinity,
       url: BaseUrl + "auth/",
       headers: {
@@ -36,11 +36,23 @@ function Login(props) {
       .then((response) => {
         console.log(JSON.stringify(response.data));
         setLogin_status("Login Successful");
-        localStorage.setItem("Token", response.data.token); // store the token in local storage
+        localStorage.setItem("Token", response.data.token); // Store the token in local storage
       })
       .catch((error) => {
         console.log(error);
-        setLogin_status("Login Failed");
+        if (error.response) {
+          // Server responded with a status code out of the range of 2xx
+          console.log("Response error:", error.response.data);
+          setLogin_status("Login Failed: " + error.response.data.detail);
+        } else if (error.request) {
+          // No response was received
+          console.log("Request error:", error.request);
+          setLogin_status("Login Failed: No response from server");
+        } else {
+          // Other errors
+          console.log("Error:", error.message);
+          setLogin_status("Login Failed: " + error.message);
+        }
       });
   }
 
