@@ -37,16 +37,13 @@ function Login(props) {
       .request(config)
       .then((response) => {
         console.log(JSON.stringify(response.data));
-<<<<<<< HEAD
         setLogin_status("Login Successful"); // show login status
-        localStorage.setItem("Token", response.data.token); // store the token in local storage
       })
       .catch((error) => {
         console.log(error);
         setLogin_status("Login Failed"); // show login status
-=======
+
         setLogin_status("Login Successful");
-        localStorage.setItem("Token", response.data.token); // Store the token in local storage
       })
       .catch((error) => {
         console.log(error);
@@ -63,35 +60,35 @@ function Login(props) {
           console.log("Error:", error.message);
           setLogin_status("Login Failed: " + error.message);
         }
->>>>>>> main
       });
   }
 
   return (
     <div class="login-form">
-  <h2>Login</h2>
-  <div class="form-group">
-    <label for="username">Username:</label>
-    <input
-      id="username"
-      type="text"
-      placeholder="Enter your username"
-      onChange={usernameHandler}
-    />
-  </div>
-  <div class="form-group">
-    <label for="password">Password:</label>
-    <input
-      id="password"
-      type="password"
-      placeholder="Enter your password"
-      onChange={passwordHandler}
-    />
-  </div>
-  <button class="login-btn" onClick={loginhandler}>Login</button>
-  <p id="login_status">{login_status}</p>
-</div>
-
+      <h2>Login</h2>
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input
+          id="username"
+          type="text"
+          placeholder="Enter your username"
+          onChange={usernameHandler}
+        />
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input
+          id="password"
+          type="password"
+          placeholder="Enter your password"
+          onChange={passwordHandler}
+        />
+      </div>
+      <button class="login-btn" onClick={loginhandler}>
+        Login
+      </button>
+      <p id="login_status">{login_status}</p>
+    </div>
   );
 }
 
