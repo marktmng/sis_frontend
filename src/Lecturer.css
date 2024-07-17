@@ -1,0 +1,46 @@
+.lecturer-container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .lecturer-heading {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .lecturer-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .lecturer-table th,
+  .lecturer-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .lecturer-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .lecturer-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .lecturer-table tbody tr:hover {
+    background-color: #e9f7fd;
+    cursor: pointer;
+  }
+  
+  .no-lecturers {
+    text-align: center;
+    padding: 12px;
+    color: #999;
+  }
+  
