@@ -10,6 +10,7 @@ import Program from './components/Program';
 import StudentMark from './components/StudentMark';
 import TutionFee from './components/TutionFee';
 import Login from './components/Login';
+import Registration from './components/Registration';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Route path="/studentmark" element={<StudentMark/>}/>
       <Route path="/tutionfee" element={<TutionFee/>}/>
       <Route path="/login" element={<Login/>}/>
+      <Route path="/registration" element={<Registration/>}/>
 
       </Routes>
     </div>
