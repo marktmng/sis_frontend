@@ -6,7 +6,6 @@ function Home(props) {
         container: {
             maxWidth: '800px',
             margin: '0 auto',
-            backgroundColor: '#fff',
             padding: '20px',
             borderRadius: '8px',
             boxShadow: '0 0 10px rgba(0,0,0,0.1)',
