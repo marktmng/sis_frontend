@@ -4,7 +4,7 @@ function Home(props) {
   // Define styles
   const styles = {
     container: {
-      maxWidth: "800px",
+      maxWidth: "70%",
       margin: "0 auto",
       padding: "20px",
       borderRadius: "8px",
