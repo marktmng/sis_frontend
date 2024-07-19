@@ -43,7 +43,6 @@ function Login(props) {
       .catch((error) => {
         console.log(error);
         setLogin_status("Login Failed"); // show login status
-        setLogin_status("Login Successful");
       })
       .catch((error) => {
         console.log(error);
@@ -60,33 +59,25 @@ function Login(props) {
           console.log("Error:", error.message);
           setLogin_status("Login Failed: " + error.message);
         }
-
       });
   }
 
   return (
     <div className="login-form">
-  <h2>Login</h2>
-  <div className="form-group">
-    <label>Username:</label>
-    <input
-      id="username"
-      type="text"
-      onChange={usernameHandler}
-    />
-  </div>
-  <div className="form-group">
-    <label>Password:</label>
-    <input
-      id="password"
-      type="password"
-      onChange={passwordHandler}
-    />
-  </div>
-  <button className="login-btn" onClick={loginhandler}>Login</button>
-  <p id="login_status">{login_status}</p>
-</div>
-
+      <h2>Login</h2>
+      <div className="form-group">
+        <label>Username:</label>
+        <input id="username" type="text" onChange={usernameHandler} />
+      </div>
+      <div className="form-group">
+        <label>Password:</label>
+        <input id="password" type="password" onChange={passwordHandler} />
+      </div>
+      <button className="login-btn" onClick={loginhandler}>
+        Login
+      </button>
+      <p id="login_status">{login_status}</p>
+    </div>
   );
 }
 
