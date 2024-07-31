@@ -33,6 +33,7 @@ function Students(props) {
             <th>Name</th>
             <th>Email</th>
             <th>Program ID</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>
@@ -41,6 +42,7 @@ function Students(props) {
               <td>{studentData.name}</td>
               <td>{studentData.email}</td>
               <td>{studentData.program}</td>
+              <td>{studentData.status}</td>
             </tr>
           ))}
           {studentData.length === 0 && (
