@@ -4,20 +4,29 @@ import { BaseUrl } from "../Constants";
 
 function Students(props) {
   const [studentData, setStudentData] = useState([]); // State to store fetched data
+  const [programData, setProgramData] = useState({}); // State to store program data
 
   useEffect(() => {
-    let config = {
-      method: "get",
-      maxBodyLength: Infinity,
-      url: BaseUrl + "app/student/",
-      headers: {},
-    };
-
+    // Fetch students
     axios
-      .request(config)
+      .get(BaseUrl + "app/student/")
       .then((response) => {
-        console.log(JSON.stringify(response.data));
         setStudentData(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+    // Fetch programs
+    axios
+      .get(BaseUrl + "app/program/")
+      .then((response) => {
+        // Create a mapping of program IDs to program names
+        const programMap = response.data.reduce((acc, program) => {
+          acc[program.id] = program.name;
+          return acc;
+        }, {});
+        setProgramData(programMap);
       })
       .catch((error) => {
         console.log(error);
@@ -32,7 +41,7 @@ function Students(props) {
           <tr>
             <th>Name</th>
             <th>Email</th>
-            <th>Program ID</th>
+            <th>Program</th>
             <th>Status</th>
           </tr>
         </thead>
@@ -41,7 +50,8 @@ function Students(props) {
             <tr key={studentData.id}>
               <td>{studentData.name}</td>
               <td>{studentData.email}</td>
-              <td>{studentData.program}</td>
+              <td>{programData[studentData.program]}</td>
+              {/* <td>{studentData.program}</td> */}
               <td>{studentData.status}</td>
             </tr>
           ))}
