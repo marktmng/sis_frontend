@@ -101,6 +101,7 @@ function Registration(props) {
       </div>
       <div className="form-group">
         <label>Program:</label>
+
         <select
           id="program"
           value={selectedProgram}
@@ -113,6 +114,7 @@ function Registration(props) {
             </option>
           ))}
         </select>
+        
       </div>
       <div className="form-group">
         <label>Email:</label>
