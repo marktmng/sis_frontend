@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <Topbar />
-      <Routes>        
+      <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/lecturer" element={<Lecturer/>}/>
       <Route path="/students" element={<Students/>}/>

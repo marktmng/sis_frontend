@@ -42,4 +42,17 @@
     margin-top: 10px;
     color: rgb(27, 209, 6);
   }
-  
+
+.navbar-brand, .nav-link, .nav-dropdown-item {
+  font-family: 'Roboto', sans-serif; /* You can change the font family as needed */
+  font-weight: bold;
+  color: #ffffff; /* White color for text */
+}
+
+.navbar-brand:hover, .nav-link:hover, .nav-dropdown-item:hover {
+  color: #ffcc00; /* Highlight color for hover effect */
+}
+
+.navbar {
+  background-color: #004080 !important; /* Dark blue background */
+}
